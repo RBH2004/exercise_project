@@ -1,0 +1,234 @@
+* {
+    margin: 0;
+    padding: 0;
+    
+}
+
+.main {
+    display: flex;
+    height: 24vh;
+    background-color: rgb(8, 16, 16);
+    align-items: center;
+    justify-content: space-between;
+}
+
+
+.name {
+    background:linear-gradient(135deg,rgb(218, 212, 212),black);
+    display: flex;
+    height: 23vh;
+    width: 54%;
+    border-radius: 15px;
+    font-size: 70px;
+    justify-content: center;
+    align-items: center;
+    animation: ailam 1s ease;
+}
+
+@keyframes ailam{
+    from{
+        transform: translateX(-100px);
+    }
+    to{
+        transform: translateX(0px);
+    }
+}
+@keyframes gelam{
+    from{
+        transform: translateX(90px);
+    }
+    to{
+        transform:translateX(0)
+    }
+}
+
+.room {
+    background-color: rgb(221, 213, 208);
+    height: 23vh;
+    width: 44%;
+    border-radius: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 50px;
+    animation: gelam 1s ease;
+    flex-wrap: wrap;
+
+}
+
+.people {
+    background-color: black;
+    height: 10vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 25px;
+    color: white;
+    animation: ailam-gelam 1.5s ease;
+    
+}
+@keyframes ailam-gelam{
+    from{
+        transform: translatex(-100%);
+    }
+    to{
+        transform: translatex(0);
+    }
+
+}
+.members {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 60px;
+    height: 40vh;
+    background-image: url(photos/tarc.jpg);
+    background-repeat: no-repeat;
+    background-attachment: fixed ;
+    background-size: cover;
+    position: relative;
+    flex-wrap: wrap;
+
+
+}
+.shade{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: black;
+    opacity: 0.6;
+    
+}
+
+
+.box {
+    height: 40vh;
+    width: 18vw;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    flex-wrap: wrap;
+
+}
+
+.photo {
+   
+    height: 30vh;
+    position: absolute;
+    width: 100%;
+    transition: transform 0.3s ease;
+    z-index: 1;
+    box-shadow: 5px 5px 5px black;
+
+}
+
+.photo img{
+    position: absolute;
+    height:30vh ;
+    width: 100%;
+    object-fit:cover;
+}
+.nafiz-photo{
+    object-position: 0px -55px;
+}
+.rafid-photo{
+    object-position: 0px -20px;
+}
+.fahim-photo{
+    object-position: 0px -30px;
+}
+.member_name {
+    background-image: url(photos/name_background.jpg);
+    background-repeat: no-repeat;
+    background-attachment:fixed ;
+    background-size: cover;
+    height: 10vh;
+    position: absolute;
+    width: 100%;
+    transition: transform 0.3s ease;
+    box-shadow: 5px 5px 5px black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 44px;
+    color: white;
+    flex-wrap: wrap;
+
+    
+}
+.box:hover .photo{
+    transform: translateY(-10vh);
+}
+.box:hover .member_name{
+    transform: translateY(10vh);
+}
+
+.memory-hall{
+    margin: 0;
+    padding: 0;
+
+    background-image:url(photos/meme.jpg);
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size:cover ;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+
+}
+
+.container{
+    display: flex;
+    align-items: center;
+    gap: 50px;
+
+}
+ 
+.container .arrow{
+    width: 50px;
+    cursor: pointer;
+    
+} 
+.frame{
+    
+    width: 1070px;
+    height: 700px;
+    overflow: hidden;
+    /* box-shadow: -1px 1px 10px rgba(0,0,0,.5); */
+}
+
+.slider{
+    display: flex;
+    /* justify-content: center;
+    align-items: center;  */
+    transition: all 1s ease;
+    gap: 5px;
+
+}
+
+.frame .image{
+    width: 500px;
+    height: 500px;
+    object-fit:contain;
+    margin-top: 70px;
+}
+.frame .image:hover{
+    transform: scale(1.5);
+    transition: all ease 0.5s;
+}
+
+.arrow{
+    transform: translateY(-15px);
+    fill: white;
+}
+.left{
+    transform: rotate(180deg);
+}
+.right{
+    transform: rotate(0deg);
+}
